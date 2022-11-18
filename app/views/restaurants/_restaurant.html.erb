@@ -1,4 +1,8 @@
 <div id="<%= dom_id restaurant %>">
+
+<p>
+<%= link_to "Chef", chef_restaurant_path(restaurant)  %>
+</p>
   <p>
     <strong>Name:</strong>
     <%= restaurant.name %>
@@ -11,7 +15,7 @@
 
   <p>
     <strong>Rating:</strong>
-    <%= restaurant.rating %>
+    <%= "⭐️" * restaurant.rating %>
   </p>
 
 </div>

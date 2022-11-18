@@ -2,6 +2,8 @@
 
 <h1>Restaurants</h1>
 
+<%= link_to "Show top rated restaurants", top_restaurants_path  %>
+
 <div id="restaurants">
   <% @restaurants.each do |restaurant| %>
     <%= render restaurant %>

@@ -3,6 +3,19 @@
 <%= render @restaurant %>
 
 <div>
+  <hr>
+  <% @restaurant.reviews.each do |review| %>
+    <p><%= review.content %>
+    <%= link_to "Delete",
+    review_path(review),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+    </p>
+  <% end %>
+</div>
+
+
+<div>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
   <%= link_to "Back to restaurants", restaurants_path %>
 
